@@ -1,20 +1,32 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-	{
-	            "path" : "pages/mine/mine",
-	            "style" : {
-								"app-plus":{
-									"titleNView":false
-								}
-							}
-	        },
+	
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "uni-app",
+				"app-plus":{
+				"titleNView":false
+				}
 			}
-		}
-	    
+		},
+		{
+		  "path" : "pages/mine/mine",
+		  "style" : {
+			  "app-plus":{
+			  "titleNView":false
+			  }
+		  }
+	  },
+		
+	  {
+      "path" : "pages/aboutMe/aboutMe",
+      "style" : {
+				"app-plus":{
+				"titleNView":false
+				}
+			}
+    }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -30,7 +42,8 @@
 			{
 				"text":"社区",
 				"iconPath":"static/icon/home.jpg",
-				"selectedIconPath":"static/icon/home_selected.jpg"
+				"selectedIconPath":"static/icon/home_selected.jpg",
+				"pagePath":"pages/index/index"
 			},
 			{
 				"text":"商城",
@@ -66,7 +79,11 @@
 	        {
 	            "name": "mine",
 	            "path": "pages/mine/mine"
-	        }
+	        },
+					{
+					    "name": "aboutMe",
+					    "path": "pages/aboutMe/aboutMe"
+					}
 	    ]
 	}
 }
