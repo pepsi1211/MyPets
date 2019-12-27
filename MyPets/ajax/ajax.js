@@ -1,8 +1,11 @@
 import "../static/js/jquery-1.8.3.min.js"
 import md5 from "js-md5"
+import state from "../store/state.js"
 
 const ajax = {
 	httpPost: function(url, data, successFunction, successErrorFunction, failureFunction) {
+		var baseURL = state.API_SERVICE_URL;
+		
 		data = data == null ? {} : data;
 
 		var createTime = this.getSystemTime();
@@ -20,7 +23,7 @@ const ajax = {
 		};
 		$.ajax({
 			type: "POST",
-			url: url,
+			url: `${baseURL}${url}`,
 			//headers: headers==null?[]:headers,
 			headers: {},
 			data: JSON.stringify(myData),

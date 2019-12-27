@@ -1,7 +1,11 @@
 <template>
 	<view class="content">
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<text class="title">{{DISCOUNT}}</text>
+			<text class="title">{{IS_SHOW_DISCOUNT}}</text>
+			<text class="title">{{PREHEAT}}</text>
+			<text class="title">{{DOUBLE_TENTH}}</text>
+			<text class="title">{{IS_BACK}}</text>
 		</view>
 		<image v-for="(key,index) of list" :key="index" :src="`https://pic.csjc19.com/${key.LOGO}`"></image>
 	</view>
@@ -9,7 +13,11 @@
 
 <script>
 	import ajax from "../../ajax/ajax.js"
-	
+	import {
+		mapState,
+		mapActions
+	} from 'vuex'
+
 	export default {
 		data() {
 			return {
@@ -19,17 +27,34 @@
 		},
 		onLoad() {
 			ajax.httpPost(
-				"https://api.csjc19.com/TX/app_shop/home.do", {
+				"app_shop/home.do", {
 					CATEGORY: "2",
 					USER_ID: "0"
 				},
 				res => {
 					this.list = res.data.BANNER_LIST;
-					console.log(this.list)
 				}
 			);
+			this.config();
 		},
-		methods: {}
+		methods: {
+			...mapActions(["getActionCtrl"]),
+			config: function() {
+				console.log('config');
+				ajax.httpPost('app_product/formList.do', {
+					"FORM_ID": '0',
+					'PRODUCT_ID': '1633',
+					"USER_ID": '0'
+				}, res => {
+					var config = res.config;
+					this.getActionCtrl(config);
+					console.log(res);
+				});
+			}
+		},
+		computed: {
+			...mapState(['DISCOUNT','IS_SHOW_DISCOUNT','PREHEAT','DOUBLE_TENTH','IS_BACK'])
+		}
 	}
 </script>
 
