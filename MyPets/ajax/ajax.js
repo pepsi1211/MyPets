@@ -31,17 +31,20 @@ const ajax = {
 			dataType: "JSON",
 			async: true,
 			success: function(json) {
+				console.log(json)
 				if (json.response != 0) {
 					//失败
 					if (successErrorFunction == null) {
 						return false;
 					}
+					console.log("请求失败了");
 					successErrorFunction(json);
 				} else {
 					//成功
 					if (successFunction == null) {
 						return false;
 					}
+					console.log("请求成功了");
 					successFunction(json);
 				}
 			},

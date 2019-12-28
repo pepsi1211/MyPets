@@ -1,13 +1,8 @@
 <template>
 	<view class="content">
 		<view class="text-area">
-			<text class="title">{{DISCOUNT}}</text>
-			<text class="title">{{IS_SHOW_DISCOUNT}}</text>
-			<text class="title">{{PREHEAT}}</text>
-			<text class="title">{{DOUBLE_TENTH}}</text>
-			<text class="title">{{IS_BACK}}</text>
 		</view>
-		<image v-for="(key,index) of list" :key="index" :src="`https://pic.csjc19.com/${key.LOGO}`"></image>
+		<!-- <image v-for="(key,index) of list" :key="index" :src="`https://pic.csjc19.com/${key.LOGO}`"></image> -->
 	</view>
 </template>
 
@@ -26,16 +21,20 @@
 			}
 		},
 		onLoad() {
+			var data = {
+				"AREA_ID": "0", //专区ID 0:默认 1:小型犬专区 2:中大型犬专区 3:幼犬专区 4:幼猫专区 5:成猫专区
+				"CATEGORY": "1", //类型 1：狗 2：猫
+				"COUNT": "10",
+				"PAGE": "7",
+				"USER_ID": "0"
+			};
 			ajax.httpPost(
-				"app_shop/home.do", {
-					CATEGORY: "2",
-					USER_ID: "0"
-				},
-				res => {
-					this.list = res.data.BANNER_LIST;
+				"app_shop/likeList.do", data,
+				(res) => {
+					// this.list = res.data.SEASON_BANNER_LIST;
+					console.log(res)
 				}
 			);
-			this.config();
 		},
 		methods: {
 			...mapActions(["getActionCtrl"]),
@@ -48,12 +47,12 @@
 				}, res => {
 					var config = res.config;
 					this.getActionCtrl(config);
-					console.log(res);
+					// console.log(res);
 				});
 			}
 		},
 		computed: {
-			...mapState(['DISCOUNT','IS_SHOW_DISCOUNT','PREHEAT','DOUBLE_TENTH','IS_BACK'])
+			...mapState(['DISCOUNT', 'IS_SHOW_DISCOUNT', 'PREHEAT', 'DOUBLE_TENTH', 'IS_BACK'])
 		}
 	}
 </script>

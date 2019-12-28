@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-themes-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>它嗅宠物</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/changeRemCode.js"></script>
+</head>
+<body>
+<!--头部-->
+<header>
+    <div class="headerLeft"></div>
+    <div class="headerCenter">它嗅宠物</div>
+    <div class="headerRight"></div>
+</header>
+<!--<p style="height: 0.7rem;"></p>-->
+<!--搜索框-->
+<div class="searchBox"><div onclick="goToSearch()">搜索关键字</div></div>
+<!--首页banner轮播图-->
+<div class="swiper-container rollBanner">
+    <div class="swiper-wrapper">
+        <!--<div class="swiper-slide"><img src="image/img1.png"></div>-->
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="indexNav">
+    <p class="active">汪星人</p>
+    <p>喵星人</p>
+</div>
+<div class="mainContent">
+    <ul class="mainType"></ul>
+    <!--分类（犬种与猫种）专区-->
+    <ul class="kindType"></ul>
+    <!--拼团等分类-->
+    <div class="goodsActive">
+        <div class="goodsActiveTop"><a href="groupPurchase.html" id="Fight_buy_1"></a><a href="setATimeBuy.html" id="Limit_buy_1"></a></div>
+        <div class="goodsActiveBottom">
+            <a href="clearanceSale.html" id="Clean_buy_1"></a>
+            <a href="newGoods.html" id="New_buy_1"></a>
+            <a href="beFree.html" id="Help_buy_1"></a>
+        </div>
+    </div>
+    <!--它嗅会员卡-->
+    <a href="mineMember.html" id="Vip_buy_1"><img src="image/vipCard.png" class="vipCard"/></a>
+    <!--专区商品-->
+    <div class="prefectureGoodsBox"></div>
+</div>
+<!--猜你喜欢-->
+<div class="maybeLike">
+    <h1 class="maybeLikeTitle">猜你喜欢</h1>
+    <ul class="maybeLikeGoods"></ul>
+</div>
+<!--新用户大礼包弹框-->
+<div class="upGiftBox a">
+    <div class="upGift">
+        <div class="upGiftMain">
+            <h1>送你一份大礼包</h1>
+            <p>赶紧领取吧 ~ </p>
+            <img src="image/giftIcon.png" />
+            <button>立即领取</button>
+        </div>
+        <img src="image/beFreeClose.png" class="upClose"/>
+    </div>
+</div>
+<!-- 领取大礼包 -->
+<div class="upGiftGetBox a">
+    <div class="upGiftGet">
+        <div class="upGiftMain">
+            <h1>恭喜你领取了3张优惠券</h1>
+            <p>优惠券已存入你的账号</p>
+            <ul class="upGiftMainList">
+                <li>
+                    <div class="upGiftMainListL">
+                        <div><span>￥</span> 50</div>
+                        <p>满200元可用</p>
+                    </div>
+                    <div class="upGiftMainListR">
+                        <div>单品优惠券</div>
+                        <p>有效期至：2018.07.19</p>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <img src="image/beFreeClose.png" class="upClose"/>
+    </div>
+</div>
+<!--前往微信客户端浏览器打开弹窗-->
+<div class="openWeixin">
+    <div class="remind">
+        <div class="title">
+            <h1>请前往微信浏览器打开页面</h1>
+        </div>
+        <img src="image/beFreeClose.png" class="upClose"/>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goTop" onclick="pageScroll()"></div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jweixin-1.2.0.min.js"></script>
+<script src="js/dropload.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/md5.js"></script>
+<!--<script src="js/aes-min.js"></script>-->
+<!--<script src="js/enc-base64-min.js"></script>-->
+<script src="js/common.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/tabbar.js"></script>
+<script src="js/index.js?b=2.0"></script>
+</body>
+</html>
