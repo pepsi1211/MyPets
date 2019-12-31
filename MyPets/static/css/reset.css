@@ -30,7 +30,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
-    font-size:0.22rem;
+    /* font-size:0.22rem; */
     font-weight: 400;
 }
 
@@ -73,7 +73,7 @@ input,textarea,button{
     border: none;
     outline: none;
     background: none;
-    font-size:0.23rem;
+    /* font-size:0.23rem; */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

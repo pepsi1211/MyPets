@@ -1,13 +1,15 @@
 <template>
 	<view class="content">
-<<<<<<< HEAD
-		我是主页
-=======
+<!-- <<<<<<< HEAD -->
+<!-- ======= -->
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
 		<image v-for="(key,index) of list" :key="index" :src="`https://pic.csjc19.com/${key.LOGO}`"></image>
->>>>>>> 2081185d49b728a20937da773a1cbda994fd6b80
+<!-- <<<<<<< HEAD -->
+<!-- >>>>>>> 2081185d49b728a20937da773a1cbda994fd6b80 -->
+<!-- ======= -->
+<!-- >>>>>>> 2081185d49b728a20937da773a1cbda994fd6b80 -->
 	</view>
 </template>
 

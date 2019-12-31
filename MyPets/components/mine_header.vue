@@ -1,10 +1,10 @@
 <template>
 	<view class="out">
-		<view class="image-set">
+		<view class="image-set" @click="navTo(setting)">
 			<image src="../../static/icon/setting.jpg" class="setting" mode="widthFix" style="width:21px;height: 21px;"></image>
 		</view>
 		
-		<view class="person">
+		<view class="person" @click="navTo('aboutMe')">
 			<image class="person-vi b1" style="width:62px;height:62px;"></image>	
 			<div class="person-text">
 				<text class="text-nickname"> 安静的稻草人 </text>
@@ -19,7 +19,14 @@
 		data() {
 			return {
 				
-			};
+			}
+		},
+		methods: {
+			navTo(url){
+				uni.navigateTo({
+					url: `../${url}/${url}`
+				})
+			}
 		}
 	}
 </script>
