@@ -1,0 +1,211 @@
+
+/*@font-face{*/
+    /*font-family: PingFang;*/
+    /*src: url('../font/PingFang Heavy.otf');*/
+/*}*/
+
+/*@font-face{*/
+    /*font-family: pingfangscbold_dowwncc;*/
+    /*src: url('../font/pingfangscbold_downcc.ttf');*/
+/*;*/
+/*}*/
+
+@supports (bottom: env(safe-area-inset-bottom)){
+    body,.footer{
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+*{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+body{
+    font-family:'Microsoft YaHei'
+}
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+    font-size:0.22rem;
+    font-weight: 400;
+}
+
+div,li,h1,h2,h3,h4,h5,h6,em,span,p{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul {
+    list-style: none;
+}
+a{text-decoration: none;
+    color: #000;}
+a:hover{text-decoration: none}
+caption,th {
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+    font-size: 100%;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+input,textarea,button{
+    border: none;
+    outline: none;
+    background: none;
+    font-size:0.23rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button{
+    padding:0;
+}
+select{
+    outline: none;
+}
+
+body{
+    background: #F7F7F7;
+}
+/* 设置图片视频等自适应调整 */
+/*img {*/
+    /*max-width: 100%;*/
+    /*height: auto;*/
+    /*width: auto\9; !* ie8 *!*/
+/*}*/
+/*.video embed, .video object, .video iframe {*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
+
+.dialog{width:100%; height:100%; position:fixed; top:0; background:rgba(0,0,0,0.3); z-index:99999999999990000;}
+.alert_dialog{position:fixed; width:6.4rem; height:100%; background-color:transparent; text-align:center; top:0; z-index:1999999999999999999;}
+.show_alert{display:inline-block; padding:0.15rem 0.3rem; max-width:5rem; font-size:0.22rem; line-height:0.4rem; color:#fff; background:rgba(0, 0, 0, 1); box-shadow: 0 0 0.01rem 0.01rem rgba(70, 70, 70, 0.7); border-radius:0.06rem; text-align:left; margin-top:4.5rem; z-index:9999999999999999;transition:width 0.5s;}
+
+/*头部样式*/
+header{
+    display: none;
+    height:0.7rem;
+    position: fixed;
+    top:0;
+    width:6.4rem;
+    /*display: flex;*/
+    justify-content: space-between;
+    background: #F1F1F1;
+    color: #000000;
+    z-index: 9999999;
+    margin-top:-0.7rem;
+    padding-top:0.7rem;
+}
+.headerLeft{
+    width:0.5rem;
+    font-size:0.22rem;
+    line-height:0.7rem;
+    padding-left:0.5rem;
+}
+.headerCenter{
+    width:4.4rem;
+    text-align: center;
+    font-size:0.27rem;
+    line-height:0.7rem;
+}
+.headerRight{
+    width:1rem;
+}
+
+
+
+
+
+.upBox{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0rem;
+    height:100%;
+    width:100%;
+    z-index: 99999999999;
+    align-items: flex-end;
+}
+
+.beforeSend{
+    background: rgba(0,0,0,0);
+    position: fixed;
+    top:0.7rem;
+    height:100%;
+    width:100%;
+    z-index: 99999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.beforeSend img{
+    display: block;
+}
+
+.upIsBox{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0.7rem;
+    height:100%;
+    width:100%;
+    z-index: 99999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upIsSure{
+    border-radius: 13px;
+    width:4rem;
+    /*height:3.5rem;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+}
+.upIsSure h1{
+    font-size: 0.22rem;
+    line-height:0.8rem;
+    text-align: center;
+}
+.upIsSure p{
+    display: flex;
+
+}
+.upIsSure p span{
+    display: block;
+    width:50%;
+    line-height:0.6rem;
+    text-align: center;
+
+}
+.upIsSure p span:nth-child(1){
+    background: #eeeeee;
+    border-radius: 0 0 0 13px;
+}
+.upIsSure p span:nth-child(2){
+    background: #FDA128;
+    border-radius: 0 0 13px 0;
+    color: #ffffff;
+}
