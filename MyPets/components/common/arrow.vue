@@ -9,7 +9,7 @@
 	.arrow{
 		display: inline-block;
 		width: 15upx;
-		height: 38upx;
+		height: 32upx;
 		background: url(~@/static/icon/arr_right.jpg) no-repeat;
 		background-size: 15upx auto;
 	}

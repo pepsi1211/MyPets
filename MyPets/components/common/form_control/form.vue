@@ -94,7 +94,9 @@
 	.name{
 		font-size: 30upx;
 	}
-	.right i{
-		margin-bottom: 4upx;
+	.right{
+		display: flex;
+		align-items: center;
 	}
+	
 </style>

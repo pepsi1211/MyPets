@@ -27,6 +27,22 @@
 				}
 			}
     }
+        ,{
+            "path" : "pages/setting/setting",
+            "style" : {
+				"app-plus":{
+				"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/collect/collect",
+            "style" : {
+				"app-plus":{
+				"titleNView":false
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -83,6 +99,14 @@
 					{
 					    "name": "aboutMe",
 					    "path": "pages/aboutMe/aboutMe"
+					},
+					{
+					    "name": "setting",
+					    "path": "pages/setting/setting"
+					},
+					{
+					    "name": "collect",
+					    "path": "pages/collect/collect"
 					}
 	    ]
 	}

@@ -9,7 +9,6 @@
 		<my-form name="性别" placeholder="性别" ></my-form>
 		<my-form name="养宠时长" placeholder="养宠时长" ></my-form>
 		<my-form name="个人标签" placeholder="个人标签" ></my-form>
-		设置：<input type="text">
 	</view>
 	
 </template>

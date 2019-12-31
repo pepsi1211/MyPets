@@ -1,6 +1,6 @@
 <template>
 	<view class="out">
-		<view class="image-set" @click="navTo(setting)">
+		<view class="image-set" @click="navTo('setting')">
 			<image src="../../static/icon/setting.jpg" class="setting" mode="widthFix" style="width:21px;height: 21px;"></image>
 		</view>
 		
