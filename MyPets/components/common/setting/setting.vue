@@ -58,14 +58,15 @@
 		width: 27upx;
 		height: 27upx;
 		border-radius: 50%;
-		background: #4CD964;
-		
+		background: url(~@/static/icon/lock.jpg) no-repeat;
+		background-size: 27upx auto;
 	}
 	.right .call{
 		width: 75upx;
 		height: 76upx;
 		border-radius: 50%;
-		background:#007AFF;
+		background: url(~@/static/icon/service.jpg);
+		background-size: 75upx auto;
 	}
 	.right text{
 		color: #d4d4d4;
