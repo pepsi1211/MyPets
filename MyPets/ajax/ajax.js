@@ -31,7 +31,7 @@ const ajax = {
 			dataType: "JSON",
 			async: true,
 			success: function(json) {
-				console.log(json)
+				// console.log(json)
 				if (json.response != 0) {
 					//失败
 					if (successErrorFunction == null) {
