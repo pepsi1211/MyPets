@@ -7,4 +7,4 @@ function jisuan(){
 	}
 	console.log(obj);
 }
-jisuan(406,418,48);
+jisuan(174,72,30);

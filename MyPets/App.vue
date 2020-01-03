@@ -1,14 +1,24 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
+			console.log('App Launch');
+			// 首次加载缓存屏幕可用高度
+			 uni.getSystemInfo({
+				success:function(obj) {
+					uni.setStorage({
+						key: 'windowHeight',
+						data: obj.windowHeight
+					});
+				}
+			});
+			
 		},
 		onShow: function() {
 			console.log('App Show')
 		},
 		onHide: function() {
 			console.log('App Hide')
-		}
+		},
 	}
 </script>
 <style>

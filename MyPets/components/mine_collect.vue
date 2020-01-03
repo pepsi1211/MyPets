@@ -1,8 +1,8 @@
 <template>
 	<view class="container">
 		<view class="collect">
-			<view><text>0</text>收藏</view>
-			<view><text>0</text>关注</view>
+			<view @click="navTo('collect')"><text>0</text>收藏</view>
+			<view @click="navTo('concern')"><text>0</text>关注</view>
 			<view><text>0</text>粉丝</view>
 		</view>
 	</view>

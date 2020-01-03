@@ -22,11 +22,7 @@
 			}
 		},
 		methods: {
-			navTo(url){
-				uni.navigateTo({
-					url: `../${url}/${url}`
-				})
-			}
+			
 		}
 	}
 </script>

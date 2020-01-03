@@ -40,7 +40,15 @@
 				}
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/concern/concern",
+            "style" : {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -105,6 +113,10 @@
 			{
 				"name": "collect",
 				"path": "pages/collect/collect"
+			},
+			{
+				"name": "concern",
+				"path": "pages/concern/concern"
 			}
 		]
 	}
