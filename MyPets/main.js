@@ -6,14 +6,14 @@ Vue.config.productionTip = false
 // 添加页面跳转函数
 Vue.prototype.navTo = function(url) {
 	uni.navigateTo({
-		url: `../${url}/${url}`
+		url: `../${url}/${url}`,
 	})
 }
 // 添加获取缓存中的屏幕高度
 Vue.prototype.getWinH = function() {
 	uni.getStorage({
 		key: 'windowHeight',
-		success: (res)=> {
+		success: (res) => {
 			this.windowHeight = res.data;
 		}
 	})
@@ -21,7 +21,7 @@ Vue.prototype.getWinH = function() {
 App.mpType = 'app'
 
 const app = new Vue({
-    ...App,
+	...App,
 	// 挂载vuex
 	store
 })

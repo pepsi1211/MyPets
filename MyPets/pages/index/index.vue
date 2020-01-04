@@ -1,5 +1,15 @@
 <template>
-	<view style="position: relative;">
+	<view style="position: relative;" @scroll="onPageScroll(e)">
+		<!-- 主页特殊头部 -->
+		<view :class="header ? 'header0':'header1'">
+			<view class="left">
+				<i class="img"></i>
+				<text class="text">签到</text>
+			</view>
+			<view class="right">
+				<i class="message"></i>
+			</view>
+		</view>
 		<!-- 轮播图部分 -->
 		<view class="swiper100">
 			<swiper autoplay="true">
@@ -134,22 +144,94 @@
 						reply: "家养猫没有经常出去的话,保守一点可以用十日观察法,一般猫狗患狂犬病,十日内基本挂了",
 						count: 1
 					},
-				]
+				],
+				header: true,
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			onPageScroll: function(e) {
+				var tar = e.scrollTop;
+				this.header = tar <= 0 ? true : false;
+				// console.log(this.header);
+			}
 		},
 		computed: {
+
+		},
+		mounted() {
 
 		}
 	}
 </script>
 
 <style lang="scss">
+	// 头部
+	.header0 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 70upx;
+		background-color: transparent;
+		display: flex;
+		justify-content: space-between;
+		z-index: 80;
+	}
+
+	.header1 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 70upx;
+		background-color: #c11e1d;
+		display: flex;
+		justify-content: space-between;
+		z-index: 80;
+	}
+
+	.header0,
+	.header1 {
+		.left {
+			background: #fafafa;
+			width: 18%;
+			height: 60upx;
+			border-top-right-radius: 50upx;
+			border-bottom-right-radius: 50upx;
+
+			.img {
+				display: inline-block;
+				width: 32upx;
+				height: 36upx;
+				background: url(../../static/icon/sign_in.png) no-repeat;
+				background-size: 100%;
+				margin: 16upx 0 0 20upx;
+			}
+
+			.text {
+				display: inline-block;
+				font-size: 12px;
+				color: #ff7f50;
+				vertical-align: top;
+				margin: 16upx 0 0 8upx;
+			}
+		}
+
+		.right {
+			.message {
+				display: inline-block;
+				width: 38upx;
+				height: 42upx;
+				background: url(../../static/icon/nav_icon_message_default.png) no-repeat;
+				background-size: 100%;
+				margin: 16upx 20upx 0 0;
+			}
+		}
+	}
+
 	// 轮播部分
 	.swiper100 {
 		width: 100%;
@@ -381,6 +463,7 @@
 	// 它嗅故事部分
 	.story {
 		width: 100%;
+
 		.story-down {
 			.story-article {
 				display: flex;
