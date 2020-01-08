@@ -1,4 +1,4 @@
-﻿// 定义一个函数，输入的参数不限，将每个参数转为固定的格式
+﻿ // 定义一个函数，输入的参数不限，将每个参数转为固定的格式
 function jisuan(){
 	var arr = arguments;
 	var obj = {};
@@ -7,4 +7,4 @@ function jisuan(){
 	}
 	console.log(obj);
 }
-jisuan(174,72,30);
+jisuan(43,36,32,34,175,300,342,1273,100)

@@ -3,8 +3,8 @@
 		<tabSlot>
 			<!-- 标题部分 -->
 			<view class="nav-list nav-list-4" :class="cliNum" slot="title">
-				<text v-for="(item,i) in titles" :key="i" :class="cliClass(i)" @click="currentChange(i)" :style="cliZIndex(i)">{{ item }}</text>
-				<view class="bgBlock" :style="{transform:`translateX(${translateX}px)`}"></view>	
+				<text v-for="(item,i) in titles" :key="i" :class="cliClass(i)"  @click.native="currentChange($event,i)" :style="cliZIndex(i)">{{ item }}</text>
+				<view class="bgBlock" :class="isTransition" :style="{transform:`translateX(${translateX}px)`}"></view>	
 			</view>
 			<!-- 内容部分 -->
 			<view slot="bar">
@@ -32,14 +32,15 @@
 		data(){
 			return {
 				currentI: 0,
-				translateX: 0,
-				zIndex: 1
+				translateX: '',
+				zIndex: 1,
+				isTran: false
 			}
 		},
 		methods: {
 			cliClass(i){
 				return {
-					'active': i == this.currentI
+					'active': i == this.currentI,
 				}
 			},
 			cliZIndex(i) {
@@ -47,22 +48,38 @@
 					'z-index': i == this.currentI ? 1 : 0
 				}
 			},
-			currentChange(i){
+			currentChange(e,i){
+				// 点击时，有过渡
+				this.isTran = true;
+				console.log(e);	
+				console.log(i);
 				this.currentI = i;
-				// 根据num的值，判断一次移动的距离
-				var move;
-				switch(this.num) {
-					case 2:
-						move = 165;
-						break;
-					case 4 :
-						move = 90;
-						break;
-					case 5 :
-						move = 60;
-						break;
+				// 如果有i，手动触发
+				if(!e) {
+					// 根据num的值，判断一次移动的距离
+					var move;
+					switch(this.num) {
+						case 2:
+							move = 165;
+							break;
+						case 4 :
+							move = 90;
+							break;
+						case 5 :
+							move = 65;
+							break;
+					}
+					// console.log(move * i);
+					this.translateX = i * move;
+					// console.log(this.translateX)
+					
+				} else {
+					// console.log(e.currentTarget.getBoundingClientRect())
+					var left = e.currentTarget.getBoundingClientRect().left;
+					this.translateX = left;
 				}
-				this.translateX = i * move;
+				
+				
 			}
 		},
 		components: {
@@ -85,15 +102,37 @@
 			 num: {
 				 type: Number,
 				 required: true
+			 },
+			 ind: {
+				 type: Number,
+				 default: 0
 			 }
+		},
+		mounted() {
+			// 初始化tab页面
+			this.ind&&this.currentChange(null,this.ind);
+			// 去掉动画
+			this.isTran = false;
+			// 加上内边距
+			this.translateX += this.pad;
+			// console.log(this.pad);
 		},
 		computed: {
 			cliNum() {
 				return `nav-list-${this.num}`
+			},
+			pad() {
+				// 内边距
+				var tag = document.querySelector('.nav-list>uni-text');
+				// console.log(tag.getBoundingClientRect().left);
+				return tag.getBoundingClientRect().left;
+			},
+			isTransition() {
+				return {
+					"block-transition": this.isTran
+				}
 			}
 		},
-		mounted() {
-		}
 	}
 </script>
 <style scoped>
@@ -108,16 +147,22 @@
 		justify-content: space-between;
 		padding: 16upx 120upx 22upx;
 	}
-	.nav-list-5{
+	.nav-list-5 {
 		padding: 16upx 50upx 22upx;
+	}
+	.nav-list.nav-list-5 .bgBlock{
+		width: 130upx;
 	}
 	.bgBlock{
 		position: absolute;
+		left:0;
 		z-index: 0;
 		width: 180upx;
 		height: 60upx;
 		border-radius: 54upx;
 		background: #ec601e;
+	}
+	.block-transition{
 		transition: all .3s;
 	}
 	.nav-list text{
@@ -129,7 +174,7 @@
 		line-height: 60upx;
 		font-size: 26upx;
 		position: relative;
-		/* z-index: 1; */
+		z-index: 1;
 	}
 	.nav-list text.active{
 		 color: #fff; 

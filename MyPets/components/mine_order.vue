@@ -3,28 +3,28 @@
 		<view class="order">
 			<view class="text">
 				<text class="text-order">我的订单</text>
-				<text class="text-all">查看全部</text>
+				<text class="text-all" @click="navTo('order_status')">查看全部</text>
 			</view>
 			<view class="icon-list">
-				<view>
+				<view @click="navTo('order_status?ind=1')">
 					<i class="icon-1"></i>
 					<text>待付款</text>
 				</view>
-				<view>
+				<view @click="navTo('order_status?ind=2')">
 					<i class="icon-2"></i>
 					<text>待发货</text>
 				</view>
-				<view>
+				<view @click="navTo('order_status?ind=3')">
 					<i class="icon-3"></i>
 					<text>待收货</text>
 				</view>
-				<view>
+				<view @click="navTo('order_status?ind=4')">
 					<i class="icon-4"></i>
 					<text>已完成</text>
 				</view>
-				<view>
+				<view @click="navTo('refund')">
 					<i class="icon-5"></i>
-					<text>待付款</text>
+					<text>退款/售后</text>
 				</view>
 			</view>
 		</view>

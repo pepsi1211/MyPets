@@ -3,11 +3,10 @@
 		<view class="collect">
 			<view @click="navTo('collect')"><text>0</text>收藏</view>
 			<view @click="navTo('concern')"><text>0</text>关注</view>
-			<view><text>0</text>粉丝</view>
+			<view @click="navTo('concern?ind=1')"><text>0</text>粉丝</view>
 		</view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {

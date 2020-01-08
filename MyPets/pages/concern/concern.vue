@@ -1,7 +1,7 @@
 <template>
 	<view class="container" :style="{'height':windowHeight + 'px'}">
 		<my-head title="我的社交"></my-head>
-		<tab :titles="['关注','粉丝']" :num="2" :data="[1,2]"></tab>
+		<tab :titles="['关注','粉丝']" :num="2" :data="[1,2]" :ind="ind"></tab>
 	</view>
 </template>
 
@@ -11,7 +11,8 @@
 	export default {
 		data() {
 			return {
-				windowHeight: 0
+				windowHeight: 0,
+				ind: 0
 			}
 		},
 		components: {
@@ -23,14 +24,10 @@
 		},
 		mounted() {
 			this.getWinH();
-			// var _this = this;
-			// uni.getStorage({
-			// 	key: 'windowHeight',
-			// 	success: function(res) {
-			// 		_this.windowHeight = res.data;
-			// 	}
-			// })
-		}
+		},
+		onLoad:function(option) {
+			this.ind = Number(option.ind);
+		},
 	}
 </script>
 

@@ -22,7 +22,8 @@
 		},
 		mounted() {
 			this.getWinH();
-		}
+		},
+		
 	}
 </script>
 

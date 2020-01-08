@@ -5,8 +5,13 @@ import store from "./store/index.js"
 Vue.config.productionTip = false
 // 添加页面跳转函数
 Vue.prototype.navTo = function(url) {
+	// 拿到url的参数
+	var option = url.split('?')[1];
+	// 拿到页面名字
+	var pageName = url.split('?')[0];
+	// console.log(url)
 	uni.navigateTo({
-		url: `../${url}/${url}`
+		url: `../${pageName}/${url}`
 	})
 }
 // 添加获取缓存中的屏幕高度
