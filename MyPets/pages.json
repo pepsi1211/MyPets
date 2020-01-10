@@ -46,7 +46,6 @@
 					"titleNView": false
 				}
 			}
-<<<<<<< HEAD
         }
         ,{
             "path" : "pages/order_status/order_status",
@@ -71,12 +70,15 @@
 					"titleNView": false
 				}
 			}
+        },{
+            "path" : "pages/add_pets/add_pets",
+            "style" : {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
         }
     ],
-=======
-		}
-	],
->>>>>>> 979d553e05c68a48b81d434f87fa6c2ab25828f6
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

@@ -41,7 +41,7 @@
 			</view>
 		</view>
 		<!-- 添加爱宠部分 -->
-		<view class="add">
+		<view class="add" @click="navTo('add_pets')">
 			<i class="add-img"></i>
 		</view>
 		<!-- 养宠知识 -->
