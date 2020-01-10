@@ -33,12 +33,12 @@
 				for(var key in this.$refs) {
 					if(this.$refs[key].$options._componentTag === 'pane') arr.push(this.$refs[key]);
 				}
-				console.log(arr);
+				// console.log(arr);
 				return arr;
 				// console.log(this.$refs.pane1.$options._componentTag)
 			},
 			changePane(i) {
-				console.log(111);
+				// console.log(111);
 				var arr = this.getPane();
 				arr.forEach(function(item,index) {
 					if(i === index) item.show = true;

@@ -32,7 +32,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.container{
 		background: #ecf0f0;
 	}

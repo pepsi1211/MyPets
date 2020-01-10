@@ -1,13 +1,13 @@
 <template>
 	<view class="container" :style="{'height':windowHeight + 'px'}">
 		<my-head title="我的社交"></my-head>
-		<tab :titles="['关注','粉丝']" :num="2" :data="[1,2]" :ind="ind"></tab>
+		<tab :titles="['关注','粉丝']" :num="2" :data="[1,2]" :ind="ind" :pad="120"></tab>
 	</view>
 </template>
 
 <script>
 	import head from '../../components/common/head/head.vue'
-	import tab from '../../components/common/tabBar/tab.vue'
+	import tab from '../../components/common/tabBar/tab.nvue'
 	export default {
 		data() {
 			return {

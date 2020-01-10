@@ -11,11 +11,9 @@ Vue.prototype.navTo = function(url) {
 	var pageName = url.split('?')[0];
 	// console.log(url)
 	uni.navigateTo({
-<<<<<<< HEAD
-		url: `../${pageName}/${url}`
-=======
-		url: `../${url}/${url}`,
->>>>>>> 979d553e05c68a48b81d434f87fa6c2ab25828f6
+		url: `../${pageName}/${url}`,
+		animationType: 'pop-in',
+		animationDuration: 800
 	})
 }
 // 添加获取缓存中的屏幕高度
@@ -23,9 +21,24 @@ Vue.prototype.getWinH = function() {
 	uni.getStorage({
 		key: 'windowHeight',
 		success: (res) => {
-			this.windowHeight = res.data;
+			this.windowHeight = this.pxRatio(res.data);
 		}
 	})
+}
+// 添加像素转换函数
+Vue.prototype.pxRatio = function(px) {
+	// console.log(px)
+	var upx;
+	uni.getStorage({
+		key: 'pxRatio',
+		success: (res) => {
+			upx = px * res.data;
+			// console.log(res.data);
+		}
+	});
+	// 返回转换后的像素
+	// console.log(upx)
+	return upx;
 }
 App.mpType = 'app'
 

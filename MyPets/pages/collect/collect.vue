@@ -1,12 +1,12 @@
 <template>
 	<view class="container" :style="{'height':height + 'px'}">
 		<my-head title="我的收藏"></my-head>
-		<tab :titles="['商品','它秀','话题','问答']" :data="[[1],2,3,[1]]" :num="4" ></tab>
+		<tab :titles="['商品','它秀','话题','问答']" :data="[[1],2,3,[1]]" :num="4" :pad="14"></tab>
 	</view>
 </template>
 <script>
 	import head from '../../components/common/head/head.vue'
-	import tab from '../../components/common/tabBar/tab.vue'
+	import tab from '../../components/common/tabBar/tab.nvue'
 	export default {
 		data() {
 			return {
@@ -27,7 +27,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.container{
 		background: #fafafa;
 	}

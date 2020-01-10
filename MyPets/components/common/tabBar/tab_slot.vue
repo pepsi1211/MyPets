@@ -6,7 +6,6 @@
 			<slot name="bar"></slot>
 	</view>	
 </template>
-
 <script>
 	export default{
 		

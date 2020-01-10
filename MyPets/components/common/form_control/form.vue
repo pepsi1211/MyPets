@@ -7,7 +7,7 @@
 					<!-- 选择头像 -->
 					<view v-if="type=='via'" class="via b1" @click="chooseImg"></view>
 					<!-- 输入文字 -->
- 					<input v-if="type=='input'" @focus="focus" id="inp" type="text" class="uni-input" :placeholder="placeholder" :style="{'width':inpWidth + 'px'}" cursor="2" selection-start="3" selection-end="5">
+ 					<input v-if="type=='input'" @focus="focus" type="text" class="uni-input" :placeholder="placeholder" :style="{'width':inpWidth + 'px'}">
 					<!-- 富文本 -->
 					<!-- 选择日期/性别 -->
 					<my-arrow></my-arrow>
@@ -65,14 +65,11 @@
 <style scoped>
 	.content{
 		display: flex;
-		justify-content: space-between;
-		padding: 26upx 22upx;
-		margin-bottom: 2upx;
-		align-items: center;
+		
 	}
-	.uni-input{
+	/* .uni-input{
 		display: inline-block;
-		/* width: 152upx; */
+		
 		height: 60upx;
 		margin-right: 21upx;
 		font-size: 30upx;
@@ -81,8 +78,8 @@
 		text-align: right;
 		line-height: 60upx;
 		font-size: 30upx;
-		/* height: 60upx; */
-	}
+		
+	} */
 	/* 头像 */
 	.via{
 		display: inline-block;

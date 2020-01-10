@@ -1,9 +1,9 @@
 <template>
 	<view class="container">
 		<view class="collect">
-			<view @click="navTo('collect')"><text>0</text>收藏</view>
-			<view @click="navTo('concern')"><text>0</text>关注</view>
-			<view @click="navTo('concern?ind=1')"><text>0</text>粉丝</view>
+			<view @tap="navTo('collect')"><text>0</text>收藏</view>
+			<view @tap="navTo('concern')"><text>0</text>关注</view>
+			<view @tap="navTo('concern?ind=1')"><text>0</text>粉丝</view>
 		</view>
 	</view>
 </template>
@@ -34,6 +34,7 @@
 		align-items: center;
 	}
 	.collect view{
+		line-height: 106upx;
 		width: 33%;
 		text-align: center;
 		font-size: 28upx;
@@ -47,6 +48,7 @@
 		height:42upx;
 		background: #ebebeb;
 		position: absolute;
+		top:32upx;
 	}
 	.collect text{
 		margin-right: 14upx;
