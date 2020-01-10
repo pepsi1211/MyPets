@@ -71,6 +71,13 @@
 					"titleNView": false
 				}
 			}
+        },{
+            "path" : "pages/add_pets/add_pets",
+            "style" : {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
         }
 	    ,{
             "path" : "pages/login/login",

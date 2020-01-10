@@ -11,9 +11,13 @@ Vue.prototype.navTo = function(url) {
 	var pageName = url.split('?')[0];
 	// console.log(url)
 	uni.navigateTo({
+
 		url: `../${pageName}/${url}`,
 		animationType: 'pop-in',
 		animationDuration: 800
+
+		url: `../${pageName}/${url}`
+
 	})
 }
 // 添加获取缓存中的屏幕高度
