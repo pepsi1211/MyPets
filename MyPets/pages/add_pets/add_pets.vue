@@ -2,7 +2,7 @@
 	<view class="add">
 		<my-head title="我的爱宠" hint="添加爱宠"></my-head>
 		<view class="add-pets">
-			<text class="add-btn">去添加</text>
+			<text class="add-btn" @click="navTo('add_form')">去添加</text>
 		</view>
 		<none></none>
 	</view>
@@ -31,7 +31,6 @@
 	 /deep/ .head{
 		background-image: linear-gradient(to right,#fe8800,#fb6600);
 		color: #fff;
-		font-weight: 400;
 	}
 	
 	/deep/ .arrows{
@@ -39,14 +38,18 @@
 		background-size: contain;
 	}
 	
+	/deep/ .null{
+		margin-top: 339upx;
+	}
+	
 	.add-pets{
 		width: 100%;
-		height: 350upx;
+		height: 220upx;
 		background-image: linear-gradient(to right,#fe8800,#fb6600);
 		overflow: hidden;
 		.add-btn{
 			display: block;
-			margin: 155upx auto;
+			margin: 90upx auto;
 			width: 150upx;
 			height: 40upx;
 			font-size: 12px;

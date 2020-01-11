@@ -77,6 +77,13 @@
 					"titleNView": false
 				}
 			}
+        },{
+            "path" : "pages/add_form/add_form",
+            "style" : {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
         }
     ],
 	"globalStyle": {
