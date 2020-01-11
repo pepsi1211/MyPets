@@ -7,8 +7,13 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 	.content{
 		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		padding: 26upx 22upx;
+		margin-bottom: 2upx;
+		align-items: center;
 	}
 </style>

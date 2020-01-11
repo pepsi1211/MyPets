@@ -1,15 +1,18 @@
 <template>
 	<view class="out">
 		<view class="image-set" @click="navTo('setting')">
-			<image src="../../static/icon/setting.jpg" class="setting" mode="widthFix" style="width:21px;height: 21px;"></image>
+			<image src="../../static/icon/setting.jpg" class="setting" mode="widthFix" style="width:42upx;height: 42upx;"></image>
 		</view>
-		
 		<view class="person" @click="navTo('aboutMe')">
 			<image class="person-vi b1" style="width:62px;height:62px;"></image>	
-			<div class="person-text">
+			<view class="person-text">
 				<text class="text-nickname"> 安静的稻草人 </text>
 				<text class="text-say"> 这个人很懒，什么都没留下 </text>
-			</div>
+			</view>
+		</view>
+		<!-- 会员背景图 -->
+		<view class="member">
+			<i class="bg-member"></i>
 		</view>
 	</view>
 </template>
@@ -27,16 +30,17 @@
 	}
 </script>
 
-<style>
+<style scoped>
   .out{
-		height:334upx;
+		/* height:334upx; */
 		width:100%;
 		background: #ffd94e;
 		/* position: relative; */
 		margin-bottom: 22upx;
+		
 	}
 	.image-set{
-		/* position: relative; */
+		text-align: right;
 		
 	}
 	.image-set::after{
@@ -45,14 +49,13 @@
 		clear:both;
 	}
 	.image-set image{
-		float: right;
-		right:30upx;
-		top: 84upx;
+		position: relative;
+		right: 0;
+		margin-top: 60upx;
+		margin-right: 22upx;
 	}
 	.person{
 		margin-left: 30upx;
-		margin-top: 84upx;
-		
 		display: flex;
 	}
 	.person-vi{
@@ -73,5 +76,19 @@
 	}
 	.text-say{
 		font-size: 24upx;
+	}
+	.member {
+		height: 84upx;
+		width: 100%;
+		margin-top: 57upx;
+		text-align: center;
+	}
+	.member .bg-member {
+		display: inline-block;
+		width: 622upx;
+		height: 84upx;
+		background: url(~@/static/icon/bg_memmber.png) no-repeat;
+		background-size: 622upx;
+	
 	}
 </style>

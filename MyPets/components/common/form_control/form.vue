@@ -2,6 +2,7 @@
 	<view>
 		<form-slot>
 			<!-- <view class="content"> -->
+<<<<<<< HEAD
 			<text class="name">{{ name}}</text>
 			<view class="right">
 				<!-- 选择头像 -->
@@ -13,6 +14,18 @@
 				<!-- 选择日期/性别 -->
 				<my-arrow></my-arrow>
 			</view>
+=======
+				<text class="name">{{ name}}</text>
+				<view class="right">
+					<!-- 选择头像 -->
+					<view v-if="type=='via'" class="via b1" @click="chooseImg"></view>
+					<!-- 输入文字 -->
+ 					<input v-if="type=='input'" @focus="focus" type="text" class="uni-input" :placeholder="placeholder" :style="{'width':inpWidth + 'px'}">
+					<!-- 富文本 -->
+					<!-- 选择日期/性别 -->
+					<my-arrow></my-arrow>
+				</view>  
+>>>>>>> 471561855026dab8e63aff667a6629d81a94a01d
 		</form-slot>
 	</view>
 
@@ -66,15 +79,16 @@
 <style scoped>
 	.content {
 		display: flex;
-		justify-content: space-between;
-		padding: 26upx 22upx;
-		margin-bottom: 2upx;
-		align-items: center;
+		
 	}
+<<<<<<< HEAD
 
 	.uni-input {
+=======
+	/* .uni-input{
+>>>>>>> 471561855026dab8e63aff667a6629d81a94a01d
 		display: inline-block;
-		/* width: 152upx; */
+		
 		height: 60upx;
 		margin-right: 21upx;
 		font-size: 30upx;
@@ -84,9 +98,14 @@
 		text-align: right;
 		line-height: 60upx;
 		font-size: 30upx;
+<<<<<<< HEAD
 		/* height: 60upx; */
 	}
 
+=======
+		
+	} */
+>>>>>>> 471561855026dab8e63aff667a6629d81a94a01d
 	/* 头像 */
 	.via {
 		display: inline-block;
