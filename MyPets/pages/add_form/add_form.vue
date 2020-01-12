@@ -17,8 +17,8 @@
 				<view class="form-cell">
 					<view class="cell-left">生日</view>
 					<view class="cell-rigth">
-						<picker mode="date" :value="date" @change="bindDateChange" style="width: 130upx;height: 50upx;">
-							<view>{{date}}</view>
+						<picker mode="date" :value="date" @change="bindDateChange">
+							<view style="color: #666;font-size: 14px;">{{date}}</view>
 						</picker>
 					</view>
 				</view>
@@ -32,11 +32,9 @@
 	import myForm from '../../components/common/form_control/form.vue'
 	export default {
 		data() {
-			const currentDate = this.getDate({
-				format: true
-			})
+			// const currentDate = new Date().toISOString().slice(0, 10)
 			return {
-				date: currentDate,
+				date: this.getDate(),
 			}
 		},
 		methods: {
@@ -109,11 +107,6 @@
 
 				.cell-left {
 					font-size: 14px;
-				}
-
-				.cell-right {
-					width: 30%;
-					height: 50upx;
 				}
 			}
 		}

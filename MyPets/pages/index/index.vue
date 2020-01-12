@@ -1,7 +1,7 @@
 <template>
 	<view style="position: relative;" @scroll="onPageScroll(e)">
 		<!-- 主页特殊头部 -->
-		<view :class="header ? 'header0':'header1'">
+		<view :class="header ? 'header0':'header1'" class="mt">
 			<view class="left">
 				<i class="img"></i>
 				<text class="text">签到</text>
@@ -171,7 +171,7 @@
 	// 头部
 	.header0 {
 		position: absolute;
-		top: 0;
+		top: 50upx;
 		left: 0;
 		width: 100%;
 		height: 70upx;
@@ -186,7 +186,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 70upx;
+		height: 120upx;
 		background-color: #c11e1d;
 		display: flex;
 		justify-content: space-between;
@@ -232,6 +232,14 @@
 		}
 	}
 
+	.header1.mt{
+		.left{
+			margin-top: 50upx;
+		}
+		.right{
+			margin-top: 50upx;
+		}
+	}
 	// 轮播部分
 	.swiper100 {
 		width: 100%;
