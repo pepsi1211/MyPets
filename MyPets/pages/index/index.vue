@@ -26,7 +26,7 @@
 					<i class="nav-icon topic"></i>
 					<text>知识库</text>
 				</view>
-				<view class="nav-content">
+				<view class="nav-content" @tap="navTo('talk')">
 					<i class="nav-icon talk"></i>
 					<text>宠友帮</text>
 				</view>

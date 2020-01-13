@@ -103,6 +103,13 @@
 					"titleNView": false
 				}
 			}
+		},{
+			"path": "pages/talk/talk",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {
