@@ -34,7 +34,7 @@
 	}
 	
 	/deep/ .arrows{
-		background: url(../../static/icon/im_commander_back_black.png) no-repeat;
+		background: url(../../static/icon/back_white_style.png) no-repeat;
 		background-size: contain;
 	}
 	
