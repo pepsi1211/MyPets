@@ -11,51 +11,51 @@
 					<!-- 富文本 -->
 					<!-- 选择日期/性别 -->
 					<my-arrow></my-arrow>
-				</view>  
+				</view>
 		</form-slot>
 	</view>
-	
-	
+
+
 </template>
 
 <script>
 	import formSlot from './form_slot.vue'
 	import myArrow from '../arrow.vue'
-	export default{
+	export default {
 		data() {
 			return {
 				inpWidth: 76
 			}
 		},
-		props:{
-			name:{
+		props: {
+			name: {
 				type: String
 			},
-			placeholder:{
+			placeholder: {
 				type: String
 			},
-			isShowArrow:{
+			isShowArrow: {
 				type: Boolean,
 				default: true
 			},
-			type:{
+			type: {
 				type: String,
 				default: 'input'
 			}
 		},
 		methods: {
-			focus(e){
+			focus(e) {
 				// uni.chooseImage({
 				// 	sourceType: ['album','camera'], //从相册选择、摄像头
 				// })
 			},
-			chooseImg(){
+			chooseImg() {
 				uni.chooseImage({
-					sourceType:['album','camera'],
+					sourceType: ['album', 'camera'],
 				})
 			}
 		},
-		components:{
+		components: {
 			'form-slot': formSlot,
 			'my-arrow': myArrow
 		}
@@ -63,37 +63,28 @@
 </script>
 
 <style scoped>
-	.content{
+	.content {
 		display: flex;
 		
 	}
-	/* .uni-input{
-		display: inline-block;
-		
-		height: 60upx;
-		margin-right: 21upx;
-		font-size: 30upx;
+	.uni-input {
+	
 	}
-	.uni-input .uni-input-placeholder{
-		text-align: right;
-		line-height: 60upx;
-		font-size: 30upx;
-		
-	} */
 	/* 头像 */
-	.via{
+	.via {
 		display: inline-block;
 		width: 60upx;
 		height: 60upx;
 		border-radius: 50%;
 		margin-right: 20upx;
 	}
-	.name{
+
+	.name {
 		font-size: 30upx;
 	}
-	.right{
+
+	.right {
 		display: flex;
 		align-items: center;
 	}
-	
 </style>

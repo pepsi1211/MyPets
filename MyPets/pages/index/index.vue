@@ -1,7 +1,7 @@
 <template>
 	<view style="position: relative;" @scroll="onPageScroll(e)">
 		<!-- 主页特殊头部 -->
-		<view :class="header ? 'header0':'header1'">
+		<view :class="header ? 'header0':'header1'" class="mt">
 			<view class="left">
 				<i class="img"></i>
 				<text class="text">签到</text>
@@ -26,7 +26,7 @@
 					<i class="nav-icon topic"></i>
 					<text>知识库</text>
 				</view>
-				<view class="nav-content">
+				<view class="nav-content" @tap="navTo('talk')">
 					<i class="nav-icon talk"></i>
 					<text>宠友帮</text>
 				</view>
@@ -34,14 +34,14 @@
 					<i class="nav-icon home"></i>
 					<text>它秀</text>
 				</view>
-				<view class="nav-content">
+				<view class="nav-content" @tap="navTo('health')">
 					<i class="nav-icon health"></i>
 					<text>健康</text>
 				</view>
 			</view>
 		</view>
 		<!-- 添加爱宠部分 -->
-		<view class="add" @click="navTo('add_pets')">
+		<view class="add" @tap="navTo('add_pets')">
 			<i class="add-img"></i>
 		</view>
 		<!-- 养宠知识 -->
@@ -171,7 +171,7 @@
 	// 头部
 	.header0 {
 		position: absolute;
-		top: 0;
+		top: 50upx;
 		left: 0;
 		width: 100%;
 		height: 70upx;
@@ -186,7 +186,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 70upx;
+		height: 120upx;
 		background-color: #c11e1d;
 		display: flex;
 		justify-content: space-between;
@@ -232,6 +232,14 @@
 		}
 	}
 
+	.header1.mt{
+		.left{
+			margin-top: 50upx;
+		}
+		.right{
+			margin-top: 50upx;
+		}
+	}
 	// 轮播部分
 	.swiper100 {
 		width: 100%;
@@ -251,7 +259,8 @@
 		width: 90%;
 		height: 160upx;
 		display: flex;
-		justify-content: space-between;
+		// justify-content: space-between;
+		flex-direction: row;
 		padding: 16upx 24upx;
 		background: #fff;
 		border-radius: 32upx;
@@ -261,17 +270,22 @@
 		box-shadow: 0px 1px 1px #ddd;
 
 		.nav-content {
+			width: 25%;
+			border-radius: 32upx;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
-			font-size: 12upx;
+			font-size: 12px;
 			text-align: center;
 			cursor: pointer;
-
+			transition: all .6s;
+			&:active{
+				background-color: rgba(0,0,0,.6);
+			}
 			.nav-icon {
 				width: 120upx;
 				height: 120upx;
-				margin-bottom: 8upx;
+				margin: 0 auto 8upx auto;
 			}
 
 			.nav-icon.topic {

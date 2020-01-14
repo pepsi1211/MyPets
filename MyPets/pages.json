@@ -105,11 +105,7 @@
         }
         ,{
             "path" : "pages/coupon/coupon",
-            "style" : {
-							"app-plus": {
-								"titleNView": false
-							}
-						}
+            "style" : {}
         }
     ],
 	"globalStyle": {

@@ -3,6 +3,13 @@ import App from './App'
 import store from "./store/index.js"
 
 Vue.config.productionTip = false
+
+// 转换当前日期
+Vue.prototype.getDate = function() {
+	// 返回当前日期,以YYYY-MM-DD格式返回
+	return new Date().toISOString().slice(0, 10)
+}
+
 // 添加页面跳转函数
 Vue.prototype.navTo = function(url) {
 	// 拿到url的参数
