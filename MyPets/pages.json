@@ -95,6 +95,22 @@
 							}
 						}
         }
+        ,{
+            "path" : "pages/account/account",
+            "style" : {
+							"app-plus": {
+								"titleNView": false
+							}
+						}
+        }
+        ,{
+            "path" : "pages/coupon/coupon",
+            "style" : {
+							"app-plus": {
+								"titleNView": false
+							}
+						}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -163,6 +179,10 @@
 			{
 				"name": "concern",
 				"path": "pages/concern/concern"
+			},
+			{
+				"name": "login",
+				"path": "pages/login/login"
 			}
 		]
 	}

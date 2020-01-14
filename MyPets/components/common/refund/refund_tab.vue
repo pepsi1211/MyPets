@@ -1,7 +1,7 @@
 <template>
 	<view class="tabs">
 		<view class="tabs-bar">
-			<text v-for="(label,i) in labels" :key="i" @click.native="currentChange($event,i)">{{ label }}</text>
+			<text v-for="(label,i) in labels" :key="i" @click="currentChange($event,i)">{{ label }}</text>
 			<view class="transform-line" :style="{'transform': `translateX(${translateX}px)`,width: traLineWidth + 'px' }" :class="{'transition':isTransition}"></view>
 		</view>
 		<view class="tabs-content">

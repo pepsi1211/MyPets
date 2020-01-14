@@ -6,7 +6,7 @@
 		</view>
 		<!-- 图标列表 -->
 		<view class="icon-list">
-			<view>
+			<view  @tap="navTo('account')">
 				<i class="icon-1"></i>
 				<text>账号余额</text>
 			</view>
@@ -14,7 +14,7 @@
 				<i class="icon-2"></i>
 				<text>邀请有礼</text>
 			</view>
-			<view>
+			<view @tap="navTo('coupon')">
 				<i class="icon-3"></i>
 				<text>我的优惠券</text>
 			</view>
