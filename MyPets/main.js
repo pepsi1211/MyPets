@@ -22,9 +22,6 @@ Vue.prototype.navTo = function(url) {
 		url: `../${pageName}/${url}`,
 		animationType: 'pop-in',
 		animationDuration: 800,
-
-		url: `../${pageName}/${url}`
-
 	})
 }
 // 添加获取缓存中的屏幕高度

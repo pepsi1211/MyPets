@@ -28,7 +28,7 @@
 		},
 		methods: {
 			// 获取refs pane
-			getPane() {
+			getPane() {	
 				var arr = [];
 				for(var key in this.$refs) {
 					if(this.$refs[key].$options._componentTag === 'pane') arr.push(this.$refs[key]);
@@ -59,6 +59,6 @@
 	}
 </script>
 
-<style>
+<style scoped>
 
 </style>
