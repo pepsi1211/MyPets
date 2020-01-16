@@ -47,100 +47,95 @@
 					"titleNView": false
 				}
 			}
-        }
-        ,{
-            "path" : "pages/order_status/order_status",
-            "style" : {
+		}, {
+			"path": "pages/order_status/order_status",
+			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-        }
-        ,{
-            "path" : "pages/refund/refund",
-            "style" : {
+		}, {
+			"path": "pages/refund/refund",
+			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-        }
-        ,{
-            "path" : "pages/red_packet/red_packet",
-            "style" : {
+		}, {
+			"path": "pages/red_packet/red_packet",
+			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-        },{
-            "path" : "pages/add_pets/add_pets",
-            "style" : {
+		}, {
+			"path": "pages/add_pets/add_pets",
+			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-<<<<<<< HEAD
-		},{
+		}, {
 			"path": "pages/health/health",
 			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-		},{
+		}, {
+			"path": "pages/add_form/add_form",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
 			"path": "pages/talk/talk",
 			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-		},{
+		}, {
 			"path": "pages/knowledge/knowledge",
 			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
-		},{
+		}, {
 			"path": "pages/test/test",
 			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/login_more/login_more",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/account/account",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/coupon/coupon",
+			"style": {}
 		}
 	],
-=======
-        }
-	    ,{
-            "path" : "pages/login/login",
-            "style" : {
-							"app-plus": {
-								"titleNView": false
-							}
-						}
-        }
-        ,{
-            "path" : "pages/login_more/login_more",
-            "style" : {
-							"app-plus": {
-								"titleNView": false
-							}
-						}
-        }
-        ,{
-            "path" : "pages/account/account",
-            "style" : {
-							"app-plus": {
-								"titleNView": false
-							}
-						}
-        }
-        ,{
-            "path" : "pages/coupon/coupon",
-            "style" : {}
-        }
-    ],
->>>>>>> 7909b27e18e4a884613792515f68a78ea3cddafc
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
