@@ -1,4 +1,3 @@
-
 <template>
 	<head-slot>
 		<text class="title">{{ title }}</text>

@@ -110,6 +110,20 @@
 					"titleNView": false
 				}
 			}
+		},{
+			"path": "pages/knowledge/knowledge",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/test/test",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {

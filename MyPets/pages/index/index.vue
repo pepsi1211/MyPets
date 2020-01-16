@@ -22,7 +22,7 @@
 			</swiper>
 			<!-- 导航栏部分 -->
 			<view class="nav">
-				<view class="nav-content">
+				<view class="nav-content" @tap="navTo('knowledge')">
 					<i class="nav-icon topic"></i>
 					<text>知识库</text>
 				</view>
@@ -67,7 +67,7 @@
 		<view class="talk">
 			<view class="top">
 				<text class="title">铲屎官热议</text>
-				<text class="more">更多</text>
+				<text class="more" @tap="navTo('talk')">更多</text>
 			</view>
 			<view class="talk-down">
 				<block v-for="(key,index) of talk_list" :key="index">
